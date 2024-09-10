@@ -1,0 +1,106 @@
+<html>
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Photography Portfolio</title> 
+    <link rel="stylesheet" href="style.css"> 
+</head> 
+<body> 
+    <!-- Navigation Bar --> 
+    <header> 
+        <nav> 
+            <ul> 
+                <li><a href="#home">Home</a></li> 
+                <li><a href="#gallery">Gallery</a></li> 
+                <li><a href="#nature-gallery">Wallpaper Stuff</a></li> 
+                <li><a href="#wildlife-gallery">Abstract</a></li>
+                <li><a href="#about">About</a></li> 
+                <li><a href="#contact">Contact</a></li> 
+            </ul> 
+        </nav> 
+    </header> 
+    
+    <!-- Home Section --> 
+    <section id="home" class="home-section"> 
+        <div class="welcome-text"> 
+            <h1>Welcome to My Photography Portfolio</h1> 
+            <p>Explore my journey through the lens</p> 
+            <a href="#gallery" class="cta-button">View Gallery</a> 
+        </div> 
+    </section>
+
+    <!-- Gallery Section --> 
+    <section id="gallery" class="gallery-section"> 
+        <h2>Photo Gallery</h2> 
+        <div class="gallery-container"> 
+            <img src="IMG20210824132043(1).jpg" alt="Nature Photography" onclick="openLightbox(); currentSlide(1)"> 
+            <img src="20210927-IMG20210927102757 (1).jpg" alt="Portrait Photography" onclick="openLightbox(); currentSlide(2)"> 
+            <img src="IMG-20200710-WA0001.jpg" alt="Street Photography" onclick="openLightbox(); currentSlide(3)"> 
+            <img src="20210822-flower (1).jpg" alt="Wildlife Photography" onclick="openLightbox(); currentSlide(4)"> 
+        </div> 
+    </section>
+
+    <!-- Wallpaper --> 
+    <section id="nature-gallery" class="gallery-section"> 
+        <h2>Wallpaper Stuff</h2> 
+        <div class="gallery-container"> 
+            <img src="IMG20210322062957_00.jpg" alt="Nature 1" onclick="openLightbox(); currentSlide(5)"> 
+            <img src="IMG20210627080931_00.jpg" alt="Nature 2" onclick="openLightbox(); currentSlide(6)"> 
+            <img src="IMG20210416100013_00.jpg" alt="Nature 3" onclick="openLightbox(); currentSlide(7)"> 
+           
+        </div> 
+    </section>
+
+    <!-- Wildlife Gallery Section --> 
+    <section id="wildlife-gallery" class="gallery-section"> 
+        <h2>Abstract</h2> 
+        <div class="gallery-container"> 
+            <img src="WLXL0866.jpg" alt="Wildlife 1" onclick="openLightbox(); currentSlide(8)"> 
+            <img src="IMG_4349.jpg" alt="Wildlife 2" onclick="openLightbox(); currentSlide(9)"> 
+            <img src="20211223-IMG20211223072523.jpg" alt="Wildlife 3" onclick="openLightbox(); currentSlide(10)"> 
+        </div> 
+    </section>
+
+    <!-- Lightbox for viewing images --> 
+    <div id="lightbox" class="lightbox"> 
+        <span class="close" onclick="closeLightbox()">×</span> 
+        <div class="lightbox-content"> 
+            <div class="slide"><img src="IMG20210824132043(1).jpg" alt="Nature Photography"></div> 
+            <div class="slide"><img src="20210927-IMG20210927102757 (1).jpg" alt="Portrait Photography"></div> 
+            <div class="slide"><img src="IMG-20200710-WA0001.jpg" alt="Street Photography"></div> 
+            <div class="slide"><img src="20210822-flower (1).jpg" alt="Wildlife Photography"></div> 
+            <div class="slide"><img src="PIMG20210322062957_00.jpg" alt="Nature 1"></div> 
+            <div class="slide"><img src="IMG20210627080931_00.jpg" alt="Nature 2"></div> 
+            <div class="slide"><img src="IMG20210416100013_00.jpg" alt="Nature 3"></div> 
+            <div class="slide"><img src="WLXL0866.jpg" alt="Wildlife 1"></div> 
+            <div class="slide"><img src="IMG_4349.jpg" alt="Wildlife 2"></div> 
+            <div class="slide"><img src="20211223-IMG20211223072523.jpg" alt="Wildlife 3"></div> 
+        </div> 
+        <a class="prev" onclick="plusSlides(-1)">❮</a> 
+        <a class="next" onclick="plusSlides(1)">❯</a> 
+    </div>
+
+    <!-- About Section --> 
+    <section id="about" class="about-section"> 
+        <h2>About Me</h2> 
+        <p>I am a passionate photographer who loves capturing moments of nature, people, and places.</p> 
+    </section>
+
+    <!-- Contact Section --> 
+    <section id="contact" class="contact-section"> 
+        <h2>Contact Me</h2> 
+        <form action="submit_form.php" method="post"> 
+            <label for="name">Name:</label> 
+            <input type="text" id="name" name="name" required> 
+            <label for="email">Email:</label> 
+            <input type="email" id="email" name="email" required> 
+            <label for="message">Message:</label> 
+            <textarea id="message" name="message" required></textarea> 
+            <input type="submit" value="Submit"> 
+        </form> 
+        <p>Or reach me at <a href="mailto:your-email@example.com">your-email@example.com</a></p> 
+    </section>
+
+    <script src="script.js"></script> 
+</body> 
+</html>

@@ -1,0 +1,146 @@
+/* Basic reset and typography */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background: #333;
+    color: white;
+    padding: 1rem 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.home-section {
+    text-align: center;
+    padding: 100px 20px;
+    background: url('images/home-bg.jpg') no-repeat center center/cover;
+    color: white;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #f04a4a;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.gallery-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.gallery-container img {
+    margin: 10px;
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid #f04a4a;
+
+    /* Adding transition for smooth effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Zoom-out effect on hover */
+.gallery-container img:hover {
+    transform: scale(1.1); /* Scale image up slightly */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add shadow for emphasis */
+}
+
+/* Ensure image scales back to its original size when not hovered */
+.gallery-container img {
+    transform: scale(1); /* Reset scale */
+}
+
+.about-section, .contact-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+/* Lightbox styling */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    overflow: hidden; /* No scrolling; image will fit within viewport */
+}
+
+.lightbox-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: auto;
+    height: auto;
+}
+
+.slide img {
+    max-width: 90vw; /* Maximum width is 90% of viewport width */
+    max-height: 90vh; /* Maximum height is 90% of viewport height */
+    width: auto; /* Maintain the original width */
+    height: auto; /* Maintain the original height */
+}
+
+/* Navigation controls */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
